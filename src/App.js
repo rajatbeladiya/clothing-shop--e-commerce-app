@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import React from 'react';
 import Homepage from './pages/homepage/HomePage';
 import './App.css';

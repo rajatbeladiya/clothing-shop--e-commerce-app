@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './menu-item.scss';
 
 const MenuItem = ({ title, imageUrl, size }) => (
@@ -17,3 +18,15 @@ const MenuItem = ({ title, imageUrl, size }) => (
 );
 
 export default MenuItem;
+
+MenuItem.propTypes = {
+  size: PropTypes.string,
+  imageUrl: PropTypes.string,
+  title: PropTypes.string,
+};
+
+MenuItem.defaultProps = {
+  size: '',
+  imageUrl: '',
+  title: '',
+};

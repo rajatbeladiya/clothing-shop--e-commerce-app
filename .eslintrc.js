@@ -30,5 +30,6 @@ module.exports = {
     }],
     "no-underscore-dangle": 0,
     "linebreak-style": ["error", "windows"],
+    "react/jsx-props-no-spreading": "off",
   },
 };

@@ -12,29 +12,34 @@ class Directory extends Component {
         {
           title: 'HATS',
           imageUrl: 'https://i.pinimg.com/originals/e2/da/fb/e2dafb5b15392598085c755ca08c9a87.jpg',
-          key: 1,
+          id: 1,
+          linkUrl: 'hats',
         },
         {
           title: 'JACKETS',
           imageUrl: 'https://74d343bddea1278bf658-a5924997c99da0b7bc8dfec8a1658825.lmsin.net/Max/MX2/Pre%20Landing%20page/Men%20-%20Desktop22oct.jpg',
-          key: 2,
+          id: 2,
+          linkUrl: '',
         },
         {
           title: 'SNEAKERS',
           imageUrl: 'https://pmcfootwearnews.files.wordpress.com/2018/05/rexfeatures_762811u.jpg?w=700&h=437&crop=1',
-          key: 3,
+          id: 3,
+          linkUrl: '',
         },
         {
           title: 'WOMEN',
           imageUrl: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
           size: 'large',
-          key: 4,
+          id: 4,
+          linkUrl: '',
         },
         {
           title: 'MEN',
           imageUrl: 'https://thenypost.files.wordpress.com/2018/06/men-shopping-masculine.jpg?quality=80&strip=all&w=618&h=410&crop=1',
           size: 'large',
-          key: 5,
+          id: 5,
+          linkUrl: '',
         },
       ],
     };
@@ -45,14 +50,10 @@ class Directory extends Component {
     return (
       <div className="directory-menu">
         {
-          sections.map(({
-            title, imageUrl, key, size,
-          }) => (
+          sections.map(({ id, ...restSelectionProps }) => (
             <MenuItem
-              key={key}
-              title={title}
-              imageUrl={imageUrl}
-              size={size}
+              key={id}
+              {...restSelectionProps} // eslint-disable-line
             />
           ))
         }

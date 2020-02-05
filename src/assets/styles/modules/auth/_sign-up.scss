@@ -1,0 +1,19 @@
+.sign-up {
+  width: 600px;
+  margin: auto;
+  .heading {
+    font-size: 1.6rem;
+  }
+  .sign-up-form {
+    div {
+      width: 100%;
+      .input-field {
+        width: 100%;
+      }
+    }
+    .sign-up-button {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

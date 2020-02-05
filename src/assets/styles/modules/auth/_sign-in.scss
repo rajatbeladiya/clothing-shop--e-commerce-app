@@ -1,0 +1,22 @@
+.sign-in {
+  width: 600px;
+  margin: auto;
+  .heading {
+    font-size: 1.6rem;
+  }
+  .sign-in-form {
+    div {
+      width: 100%;
+      .input-field {
+        width: 100%;
+      }
+    }
+    .sign-in-buttons {
+      display: flex;
+      justify-content: flex-end;
+      .google-signin {
+        margin-left: 8px;
+      }
+    }
+  }
+}

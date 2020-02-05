@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 16px 0;
+  height: 40px;
   align-items: center;
   position: sticky;
   top: 0;
@@ -12,9 +13,15 @@
     justify-content: flex-end;
     font-size: 1.2rem;
     .option {
-      margin-left: 8px;
       text-decoration: none;
       color: #000000;
+      padding: 0 8px;
+      text-decoration: none;
+      color: #000000;
+      border-right: 1px solid grey;
+      &:last-child {
+        border-right: none;
+      }
     }
   }
 }

@@ -9,19 +9,33 @@ import SignIn from './components/auth/sign-in/SignInContainer';
 import SignUp from './components/auth/sign-up/SignUpContainer';
 import './assets/styles/app.scss';
 import CQTheme from './assets/mui/CQ';
+import { auth } from './utils/firebase';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      currentUser: null,
+    };
+  }
+
+  componentDidMount() {
+    auth.onAuthStateChanged((user) => {
+      this.setState({ currentUser: user });
+    });
+  }
+
+  componentWillUnmount() {
+    this.setState({ currentUser: null });
   }
 
   render() {
+    const { currentUser } = this.state;
     return (
       <MuiThemeProvider theme={CQTheme}>
         <BrowserRouter>
           <div className="main">
-            <Header />
+            <Header currentUser={currentUser} />
             <Switch>
               <Route exact path="/" component={Homepage} />
               <Route exact path="/shop" component={ShopPage} />
